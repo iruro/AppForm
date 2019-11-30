@@ -1,0 +1,9 @@
+C:\Users\Administrator\Documents\MY PROJECT\P. RAY\AppForm\AppForm\bin\Debug\AppForm.exe
+C:\Users\Administrator\Documents\MY PROJECT\P. RAY\AppForm\AppForm\bin\Debug\AppForm.pdb
+C:\Users\Administrator\Documents\MY PROJECT\P. RAY\AppForm\AppForm\obj\Debug\AppForm.csprojAssemblyReference.cache
+C:\Users\Administrator\Documents\MY PROJECT\P. RAY\AppForm\AppForm\obj\Debug\AppForm.Properties.Resources.resources
+C:\Users\Administrator\Documents\MY PROJECT\P. RAY\AppForm\AppForm\obj\Debug\AppForm.csproj.GenerateResource.cache
+C:\Users\Administrator\Documents\MY PROJECT\P. RAY\AppForm\AppForm\obj\Debug\AppForm.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Documents\MY PROJECT\P. RAY\AppForm\AppForm\obj\Debug\AppForm.exe
+C:\Users\Administrator\Documents\MY PROJECT\P. RAY\AppForm\AppForm\obj\Debug\AppForm.pdb
+C:\Users\Administrator\Documents\MY PROJECT\P. RAY\AppForm\AppForm\obj\Debug\AppForm.ApplicationForm.resources
