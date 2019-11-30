@@ -20,6 +20,10 @@ namespace AppForm
         {
             panel1.Visible = false;
             btnGenerate.Visible = false;
+            btnFinish.Visible = false;
+            labelTitle.Text = "Term and Condition";
+            cbOpenFileLocation.Visible = false;
+            cbRestartApp.Visible = false;
         }
 
         private void btnNext_Click(object sender, EventArgs e)
@@ -31,6 +35,8 @@ namespace AppForm
                 textBoxTermsandConditions.Visible = false;
                 btnNext.Visible = false;
                 cbAgree.Visible = false;
+                btnFinish.Visible = false;
+                panelTitle.Visible = false;
             }
             else{
                 MessageBox.Show("Please Check the Terms and Conditions Aggreement");
@@ -40,12 +46,24 @@ namespace AppForm
 
         private void btnGenerate_Click(object sender, EventArgs e)
         {
-
+            panel1.Visible = false;
+            btnGenerate.Visible = false;
+            textBoxTermsandConditions.Visible = false;
+            //textBoxTermsandConditions.Text = "";
+            btnNext.Visible = false;
+            cbAgree.Visible = false;
+            btnFinish.Visible = true;
+            panelTitle.Visible = true;
+            labelTitle.Text = "Application is completed";
+            labelTitle.TextAlign = ContentAlignment.MiddleCenter;
+            cbOpenFileLocation.Visible = true;
+            cbRestartApp.Visible = true;
         }
 
-        private void labelEmailAddr_Click(object sender, EventArgs e)
+        private void btnFinish_Click(object sender, EventArgs e)
         {
 
+            Application.Exit();
         }
     }
 }
