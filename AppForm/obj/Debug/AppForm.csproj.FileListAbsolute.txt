@@ -16,3 +16,12 @@ C:\Users\Administrator\Documents\MY PROJECT\P. RAY\GIT PROJECT\AppForm\AppForm\o
 C:\Users\Administrator\Documents\MY PROJECT\P. RAY\GIT PROJECT\AppForm\AppForm\obj\Debug\AppForm.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\Documents\MY PROJECT\P. RAY\GIT PROJECT\AppForm\AppForm\obj\Debug\AppForm.exe
 C:\Users\Administrator\Documents\MY PROJECT\P. RAY\GIT PROJECT\AppForm\AppForm\obj\Debug\AppForm.pdb
+C:\Users\robihul\Documents\Visual Studio 2013\Projects\AppForm\AppForm\bin\Debug\AppForm.exe.config
+C:\Users\robihul\Documents\Visual Studio 2013\Projects\AppForm\AppForm\obj\Debug\AppForm.exe
+C:\Users\robihul\Documents\Visual Studio 2013\Projects\AppForm\AppForm\obj\Debug\AppForm.pdb
+C:\Users\robihul\Documents\Visual Studio 2013\Projects\AppForm\AppForm\bin\Debug\AppForm.exe
+C:\Users\robihul\Documents\Visual Studio 2013\Projects\AppForm\AppForm\bin\Debug\AppForm.pdb
+C:\Users\robihul\Documents\Visual Studio 2013\Projects\AppForm\AppForm\obj\Debug\AppForm.csprojResolveAssemblyReference.cache
+C:\Users\robihul\Documents\Visual Studio 2013\Projects\AppForm\AppForm\obj\Debug\AppForm.ApplicationForm.resources
+C:\Users\robihul\Documents\Visual Studio 2013\Projects\AppForm\AppForm\obj\Debug\AppForm.Properties.Resources.resources
+C:\Users\robihul\Documents\Visual Studio 2013\Projects\AppForm\AppForm\obj\Debug\AppForm.csproj.GenerateResource.Cache

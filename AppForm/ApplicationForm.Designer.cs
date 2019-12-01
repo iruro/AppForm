@@ -51,12 +51,12 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnFinish = new System.Windows.Forms.Button();
-            this.cbOpenFileLocation = new System.Windows.Forms.CheckBox();
-            this.cbRestartApp = new System.Windows.Forms.CheckBox();
             this.labelTitle = new System.Windows.Forms.Label();
             this.panelTitle = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.labelPONumber = new System.Windows.Forms.Label();
+            this.radioButtonOFL = new System.Windows.Forms.RadioButton();
+            this.radioButtonSFFS = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -351,30 +351,6 @@
             this.btnFinish.UseVisualStyleBackColor = false;
             this.btnFinish.Click += new System.EventHandler(this.btnFinish_Click);
             // 
-            // cbOpenFileLocation
-            // 
-            this.cbOpenFileLocation.AutoSize = true;
-            this.cbOpenFileLocation.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbOpenFileLocation.ForeColor = System.Drawing.Color.White;
-            this.cbOpenFileLocation.Location = new System.Drawing.Point(39, 124);
-            this.cbOpenFileLocation.Name = "cbOpenFileLocation";
-            this.cbOpenFileLocation.Size = new System.Drawing.Size(142, 23);
-            this.cbOpenFileLocation.TabIndex = 1;
-            this.cbOpenFileLocation.Text = "Open file location";
-            this.cbOpenFileLocation.UseVisualStyleBackColor = true;
-            // 
-            // cbRestartApp
-            // 
-            this.cbRestartApp.AutoSize = true;
-            this.cbRestartApp.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbRestartApp.ForeColor = System.Drawing.Color.White;
-            this.cbRestartApp.Location = new System.Drawing.Point(39, 153);
-            this.cbRestartApp.Name = "cbRestartApp";
-            this.cbRestartApp.Size = new System.Drawing.Size(154, 23);
-            this.cbRestartApp.TabIndex = 1;
-            this.cbRestartApp.Text = "Start from first step";
-            this.cbRestartApp.UseVisualStyleBackColor = true;
-            // 
             // labelTitle
             // 
             this.labelTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -424,17 +400,43 @@
             this.labelPONumber.Text = "1234567";
             this.labelPONumber.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // radioButtonOFL
+            // 
+            this.radioButtonOFL.AutoSize = true;
+            this.radioButtonOFL.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonOFL.ForeColor = System.Drawing.Color.White;
+            this.radioButtonOFL.Location = new System.Drawing.Point(39, 138);
+            this.radioButtonOFL.Name = "radioButtonOFL";
+            this.radioButtonOFL.Size = new System.Drawing.Size(147, 21);
+            this.radioButtonOFL.TabIndex = 1;
+            this.radioButtonOFL.TabStop = true;
+            this.radioButtonOFL.Text = "Open File Location";
+            this.radioButtonOFL.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonSFFS
+            // 
+            this.radioButtonSFFS.AutoSize = true;
+            this.radioButtonSFFS.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonSFFS.ForeColor = System.Drawing.Color.White;
+            this.radioButtonSFFS.Location = new System.Drawing.Point(39, 167);
+            this.radioButtonSFFS.Name = "radioButtonSFFS";
+            this.radioButtonSFFS.Size = new System.Drawing.Size(156, 21);
+            this.radioButtonSFFS.TabIndex = 10;
+            this.radioButtonSFFS.TabStop = true;
+            this.radioButtonSFFS.Text = "Start From First Step";
+            this.radioButtonSFFS.UseVisualStyleBackColor = true;
+            // 
             // ApplicationForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(448, 551);
+            this.Controls.Add(this.radioButtonSFFS);
+            this.Controls.Add(this.radioButtonOFL);
             this.Controls.Add(this.labelPONumber);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.btnFinish);
-            this.Controls.Add(this.cbRestartApp);
-            this.Controls.Add(this.cbOpenFileLocation);
             this.Controls.Add(this.textBoxTermsandConditions);
             this.Controls.Add(this.cbAgree);
             this.Controls.Add(this.btnNext);
@@ -493,12 +495,12 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnFinish;
-        private System.Windows.Forms.CheckBox cbOpenFileLocation;
-        private System.Windows.Forms.CheckBox cbRestartApp;
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Panel panelTitle;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelPONumber;
+        private System.Windows.Forms.RadioButton radioButtonOFL;
+        private System.Windows.Forms.RadioButton radioButtonSFFS;
     }
 }
 
