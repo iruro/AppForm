@@ -55,8 +55,7 @@
             this.panelTitle = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.labelPONumber = new System.Windows.Forms.Label();
-            this.radioButtonOFL = new System.Windows.Forms.RadioButton();
-            this.radioButtonSFFS = new System.Windows.Forms.RadioButton();
+            this.checkBoxSFFS = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -395,44 +394,29 @@
             this.labelPONumber.ForeColor = System.Drawing.Color.White;
             this.labelPONumber.Location = new System.Drawing.Point(150, 12);
             this.labelPONumber.Name = "labelPONumber";
-            this.labelPONumber.Size = new System.Drawing.Size(49, 15);
+            this.labelPONumber.Size = new System.Drawing.Size(29, 15);
             this.labelPONumber.TabIndex = 8;
-            this.labelPONumber.Text = "1234567";
+            this.labelPONumber.Text = "2CN";
             this.labelPONumber.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // radioButtonOFL
+            // checkBoxSFFS
             // 
-            this.radioButtonOFL.AutoSize = true;
-            this.radioButtonOFL.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonOFL.ForeColor = System.Drawing.Color.White;
-            this.radioButtonOFL.Location = new System.Drawing.Point(39, 138);
-            this.radioButtonOFL.Name = "radioButtonOFL";
-            this.radioButtonOFL.Size = new System.Drawing.Size(147, 21);
-            this.radioButtonOFL.TabIndex = 1;
-            this.radioButtonOFL.TabStop = true;
-            this.radioButtonOFL.Text = "Open File Location";
-            this.radioButtonOFL.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonSFFS
-            // 
-            this.radioButtonSFFS.AutoSize = true;
-            this.radioButtonSFFS.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonSFFS.ForeColor = System.Drawing.Color.White;
-            this.radioButtonSFFS.Location = new System.Drawing.Point(39, 167);
-            this.radioButtonSFFS.Name = "radioButtonSFFS";
-            this.radioButtonSFFS.Size = new System.Drawing.Size(156, 21);
-            this.radioButtonSFFS.TabIndex = 10;
-            this.radioButtonSFFS.TabStop = true;
-            this.radioButtonSFFS.Text = "Start From First Step";
-            this.radioButtonSFFS.UseVisualStyleBackColor = true;
+            this.checkBoxSFFS.AutoSize = true;
+            this.checkBoxSFFS.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxSFFS.ForeColor = System.Drawing.Color.White;
+            this.checkBoxSFFS.Location = new System.Drawing.Point(39, 138);
+            this.checkBoxSFFS.Name = "checkBoxSFFS";
+            this.checkBoxSFFS.Size = new System.Drawing.Size(157, 21);
+            this.checkBoxSFFS.TabIndex = 11;
+            this.checkBoxSFFS.Text = "Start From First Step";
+            this.checkBoxSFFS.UseVisualStyleBackColor = true;
             // 
             // ApplicationForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(448, 551);
-            this.Controls.Add(this.radioButtonSFFS);
-            this.Controls.Add(this.radioButtonOFL);
+            this.Controls.Add(this.checkBoxSFFS);
             this.Controls.Add(this.labelPONumber);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panelTitle);
@@ -499,8 +483,7 @@
         private System.Windows.Forms.Panel panelTitle;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelPONumber;
-        private System.Windows.Forms.RadioButton radioButtonOFL;
-        private System.Windows.Forms.RadioButton radioButtonSFFS;
+        private System.Windows.Forms.CheckBox checkBoxSFFS;
     }
 }
 

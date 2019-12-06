@@ -7,6 +7,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Management;
+using System.Security;
 using System.Text;
 using System.Windows.Forms;
 
@@ -25,8 +26,8 @@ namespace AppForm
             btnGenerate.Visible = false;
             btnFinish.Visible = false;
             labelTitle.Text = "Term and Condition";
-            radioButtonOFL.Visible = false;
-            radioButtonSFFS.Visible = false;
+            checkBoxSFFS.Visible = false;
+            string desktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
         }
 
         private void btnNext_Click(object sender, EventArgs e)
@@ -41,10 +42,11 @@ namespace AppForm
                 btnFinish.Visible = false;
                 panelTitle.Visible = false;
             }
-            else{
+            else
+            {
                 MessageBox.Show("Please Check the Terms and Conditions Aggreement");
             }
-            
+
         }
 
         int menitLast;
@@ -61,13 +63,13 @@ namespace AppForm
             panelTitle.Visible = true;
             labelTitle.Text = "Application is completed";
             labelTitle.TextAlign = ContentAlignment.MiddleCenter;
-            radioButtonOFL.Visible = true;
-            radioButtonSFFS.Visible = true;
+            checkBoxSFFS.Visible = true;
 
             string headerTeks = "Customer Number,Full Name,Facebook ID,Phone Number,Email Address,Address,Processor ID," + Environment.NewLine;
             string logText = labelPONumber.Text + "," + textBoxFullName.Text + "," + textBoxFBId.Text + "," +
                 textBoxPhoneNumber.Text + "," + textBoxEmailAddr.Text + "," + textBoxAddress.Text + "," + GetProcessorID() + "," + Environment.NewLine;
             string namaFile = textBoxFullName.Text;
+                        
             int menitCurrent;
             menitCurrent = DateTime.Now.Minute;
             if (menitCurrent != menitLast)
@@ -80,10 +82,50 @@ namespace AppForm
             string path = namaFile + ".csv";
             string cureFIle = @path;
             string fileName = Path.GetFullPath(cureFIle);
-            
-            // Encrypt the file.
-            CryptoStuff.EncryptFile(labelPONumber.Text, cureFIle, namaFile + "_enc" + ".csv");
-            File.Delete(cureFIle);
+
+            try
+            {
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
+                saveFileDialog.InitialDirectory = @"\";
+                saveFileDialog.Title = "Save Files Users";
+                saveFileDialog.CheckFileExists = false;
+                saveFileDialog.CheckPathExists = false;
+                saveFileDialog.DefaultExt = "csv";
+                saveFileDialog.Filter = "CSV files (*.csv)|*.csv";
+                saveFileDialog.FilterIndex = 2;
+                saveFileDialog.RestoreDirectory = true;
+
+                // Get FileName
+                //string fileNameDest = Path.GetFileNameWithoutExtension(file);
+                saveFileDialog.FileName = namaFile;
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    //textBox1.Text = saveFileDialog.FileName;
+
+                    // string[] pathArr = file.Split('\\');
+                    // string[] fileArr = pathArr.Last().Split('.');
+                    //string fileName = fileArr.Last().ToString();
+                    //Console.WriteLine(file);
+                    // Encrypt the file.
+                    // CryptoStuff.EncryptFile(comboBoxProcessorID.Text, file, file_path() + "\\" + fileArr[0] + ".dat");
+                    //CryptoStuff.EncryptFile(comboBoxProcessorID.Text, file, saveFileDialog.FileName);
+                    CryptoStuff.EncryptFile(labelPONumber.Text, cureFIle, saveFileDialog.FileName);
+                    File.Delete(cureFIle);
+                    Console.WriteLine("DONE!");
+                }
+            }
+            catch (SecurityException ex)
+            {
+                // The user lacks appropriate permissions to read files, discover paths, etc.
+                MessageBox.Show("Security error. Please contact your administrator for details.\n\n" +
+                    "Error message: " + ex.Message + "\n\n" +
+                    "Details (send to Support):\n\n" + ex.StackTrace
+                );
+            }
+            //// Encrypt the file.
+            //CryptoStuff.EncryptFile(labelPONumber.Text, cureFIle, namaFile + "_enc" + ".csv");
+            //File.Delete(cureFIle);
 
             // Decrypt the file.
             //CryptoStuff.DecryptFile(labelPONumber.Text, namaFile + "_enc" + ".csv", namaFile + "_dec" + ".csv");
@@ -95,15 +137,15 @@ namespace AppForm
             string namaFile = textBoxFullName.Text;
             string path = namaFile + "_enc" + ".csv";
             string cureFIle = @path;
-            if (radioButtonOFL.Checked)
-            {
-                if (File.Exists(cureFIle))
-                {
-                    Process.Start("explorer.exe", "/select, " + cureFIle);
-                }
-                Application.Exit();
-            }
-            else if (radioButtonSFFS.Checked)
+            //if (radioButtonOFL.Checked)
+            //{
+            //    if (File.Exists(cureFIle))
+            //    {
+            //        Process.Start("explorer.exe", "/select, " + cureFIle);
+            //    }
+            //    Application.Exit();
+            //}
+            if (checkBoxSFFS.Checked)
             {
                 label2.Visible = true;
                 labelPONumber.Visible = true;
@@ -115,14 +157,13 @@ namespace AppForm
                 btnGenerate.Visible = false;
                 btnFinish.Visible = false;
                 labelTitle.Text = "Term and Condition";
-                radioButtonOFL.Visible = false;
-                radioButtonSFFS.Visible = false;
+                checkBoxSFFS.Visible = false;
             }
             else
             {
                 Application.Exit();
             }
-            
+
         }
 
         private void writeCSV(string name, string teks)
